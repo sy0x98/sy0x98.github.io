@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "export": "next export",
-    "deploy": "gh-pages -d out",
+    "deploy": "echo 'Deployment handled by GitHub Actions workflow.'",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
