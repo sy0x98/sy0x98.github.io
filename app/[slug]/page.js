@@ -56,16 +56,6 @@ export default async function PostPage({ params }) {
         </p>
         <div className="markdown">
           <div className="mb-8 relative md:-left-6 flex flex-wrap items-baseline">
-            {!isDraft && (
-              <a
-                href="https://ko-fi.com/gaearon"
-                target="_blank"
-                className="mt-10 tip tip-sm mr-4"
-              >
-                <span className="tip-bg" />
-                Pay what you like
-              </a>
-            )}
             {data.youtube && (
               <a
                 className="leading-tight mt-4"
@@ -85,7 +75,7 @@ export default async function PostPage({ params }) {
                 a: Link,
                 img: ({ src, ...rest }) => {
                   if (src && !/^https?:\/\//.test(src)) {
-                    // https://github.com/gaearon/overreacted.io/issues/827
+                
                     src = `/${slug}/${src}`;
                   }
                   return <img src={src} {...rest} />;
@@ -123,28 +113,8 @@ export default async function PostPage({ params }) {
               }}
             />
           </Wrapper>
-          {!isDraft && (
-            <a
-              href="https://ko-fi.com/gaearon"
-              target="_blank"
-              className="tip mb-8 relative md:-left-8"
-            >
-              <span className="tip-bg" />
-              Pay what you like
-            </a>
-          )}
+
           <hr />
-          <p>
-            <Link href={discussUrl}>Discuss on Bluesky</Link>
-            {data.youtube && (
-              <>
-                &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-                <Link href={data.youtube}>Watch on YouTube</Link>
-              </>
-            )}
-            &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-            <Link href={editUrl}>Edit on GitHub</Link>
-          </p>
         </div>
       </article>
     </>
@@ -164,7 +134,7 @@ export async function generateMetadata({ params }) {
   const file = await readFile("./public/" + slug + "/index.md", "utf8");
   let { data } = matter(file);
   return {
-    title: data.title + " — overreacted",
+    title: data.title + " — Shubham's Blog",
     description: data.spoiler,
   };
 }

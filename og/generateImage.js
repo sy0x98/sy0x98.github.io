@@ -40,7 +40,7 @@ export async function generateHomeImage() {
             color: "transparent",
           }}
         >
-          overreacted
+          Shubham's Blog
         </span>
         <span
           style={{
@@ -50,17 +50,7 @@ export async function generateHomeImage() {
             alignItems: "center",
           }}
         >
-          by
-          <img
-            alt="Dan Abramov"
-            src="https://github.com/gaearon.png"
-            style={{
-              height: 120,
-              width: 120,
-              borderRadius: "50%",
-              marginLeft: 20,
-            }}
-          />
+
         </span>
       </div>
     </div>,
@@ -99,7 +89,7 @@ export async function generatePostImage({ title }) {
             fontSize: 60,
           }}
         >
-          overreacted
+          Shubham's Blog
         </span>
         <span
           style={{
@@ -109,17 +99,7 @@ export async function generatePostImage({ title }) {
             alignItems: "center",
           }}
         >
-          by
-          <img
-            alt="Dan Abramov"
-            src="https://github.com/gaearon.png"
-            style={{
-              height: 80,
-              width: 80,
-              borderRadius: "50%",
-              marginLeft: 20,
-            }}
-          />
+
         </span>
       </div>
       <div

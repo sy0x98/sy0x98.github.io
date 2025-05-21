@@ -3,15 +3,15 @@ import matter from "gray-matter";
 import { Feed } from "feed";
 
 export const metadata = {
-  title: "overreacted — A blog by Dan Abramov",
-  description: "A blog by Dan Abramov",
+  title: "Blog Title",
+  description: "A blog template. Edit metadata in app/posts.js.",
   openGraph: {
-    title: "overreacted",
+    title: "Blog Title",
   },
   alternates: {
     types: {
-      "application/atom+xml": "https://overreacted.io/atom.xml",
-      "application/rss+xml": "https://overreacted.io/rss.xml",
+      "application/atom+xml": "/atom.xml",
+      "application/rss+xml": "/rss.xml",
     },
   },
 };
@@ -37,20 +37,14 @@ export async function getPosts() {
 
 export async function generateFeed() {
   const posts = await getPosts();
-  const site_url = "https://overreacted.io/";
+  const site_url = process.env.SITE_URL || "http://localhost:3000/";
 
   const feedOptions = {
-    author: {
-      name: "Dan Abramov",
-      email: "dan.abramov@gmail.com",
-      link: site_url,
-    },
     description: metadata.description,
-    favicon: `${site_url}/icon.png`,
-    feedLinks: { atom: `${site_url}atom.xml`, rss: `${site_url}rss.xml` },
+    favicon: `/icon.png`,
+    feedLinks: { atom: `/atom.xml`, rss: `/rss.xml` },
     generator: "Feed for Node.js",
     id: site_url,
-    image: "https://github.com/gaearon.png",
     link: site_url,
     title: metadata.title,
   };

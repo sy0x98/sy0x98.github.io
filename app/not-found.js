@@ -17,16 +17,14 @@ export default function NotFound() {
         <p>This page doesn't exist (yet?)</p>
         <p>
           I recently rewrote the site so maybe something broke. Please{" "}
-          <Link href="https://github.com/gaearon/overreacted.io/issues/796">
-            complain here.
+          <Link href="https://github.com/shubhamyadav/blog-template/issues">
+            report an issue.
           </Link>
         </p>
         <p>
           If you're looking for translated posts, they're not on the site
           anymore but you can find{" "}
-          <Link href="https://github.com/gaearon/overreacted.io/tree/archive/src/pages">
-            an archive of them here.
-          </Link>
+
         </p>
         <p>Hope you'll find what you're looking for.</p>
       </div>

@@ -1,7 +1,7 @@
 import { size, contentType, generateHomeImage } from "../og/generateImage";
 
 export const dynamic = "force-static";
-export const alt = "Overreacted";
+export const alt = "Shubham's Blog";
 export { size, contentType };
 
 export default async function Image() {
