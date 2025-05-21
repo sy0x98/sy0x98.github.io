@@ -3,10 +3,10 @@ import matter from "gray-matter";
 import { Feed } from "feed";
 
 export const metadata = {
-  title: "Blog Title",
+  title: "Hello World",
   description: "A blog template. Edit metadata in app/posts.js.",
   openGraph: {
-    title: "Blog Title",
+    title: "Hello World",
   },
   alternates: {
     types: {
