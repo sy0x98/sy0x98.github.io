@@ -28,6 +28,11 @@ jobs:
         run: |
           npm run build
 
+      - name: List out directory
+        run: |
+          ls -l out
+          cat out/index.html || true
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
